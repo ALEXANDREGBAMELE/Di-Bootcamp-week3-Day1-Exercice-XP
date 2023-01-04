@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navBar">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Friends</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">My Pics</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    /*Dans le <div>, modifiez la valeur de l'attribut id de navBar à
+         socialNetworkNavigation , à l'aide de la setAttributeméthode*/
+         let atrribut = document.querySelector("div")
+         let change = atrribut.setAttribute("id","socialNetworkNavigation")
+         let newatrribut =document.querySelectorAll("div")
+         console.log(newatrribut)
+
+         let createLi = document.createElement("li")
+         document.querySelector("ul").appendChild(createLi)
+         let AllLi = document.querySelectorAll("li")
+         console.log(AllLi)
+
+         //Créez un nouveau nœud de texte avec "Déconnexion" comme texte spécifié.
+         let newTextNodeDeco = document.createTextNode("Deconnexion")
+         let insertNewTextCreated = AllLi[5].append(newTextNodeDeco)
+         console.log(newatrribut)
+
+         /*Utilisez les firstElementChild propriétés et lastElementChild pour
+          récupérer le premier et le dernier <li>élément de leur élément parent
+             ( <ul>). Affichez le texte de chaque lien. ( Astuce : utilisez la textContent propriété).*/
+
+                let selectUl = document.querySelector("ul")
+                console.log(selectUl.firstElementChild.textContent)
+                console.log(selectUl.lastElementChild.textContent)
+                
+
+         
+         
+</script>
+</html>
