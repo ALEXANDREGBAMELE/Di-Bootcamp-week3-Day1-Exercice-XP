@@ -25,7 +25,7 @@
         <script>
             //Ajoutez une couleur d'arrière-plan "bleu clair" et un peu de rembourrage au fichier <div>.
             let divSelect = document.querySelector("div")
-            divSelect.style.backgroundColor = 'aqua'
+            divSelect.style.backgroundColor = 'lightblue'
             divSelect.style.padding = '15px'
 
             let ulSelect = document.querySelector("ul")
@@ -40,8 +40,14 @@
             //Modifiez la taille de la police de tout le corps
              document.querySelector('body').style.fontSize = '26px'
 
-             /* Bonus : Si la couleur de fond du divest "bleu clair", 
+             /* Bonus : Si la couleur de fond du div est "bleu clair", 
              alertez "Bonjour x et y" (x et y sont les utilisateurs dans la div).*/
+
+             function salutation(){
+                alert(`bonjour ${ulSelect.children[0].textContent} et ${ulSelect.children[1].textContent}`)
+             }
+           divSelect.style.backgroundColor == 'lightblue'&& salutation()
+
 
         </script>
 </body>
