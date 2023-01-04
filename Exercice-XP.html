@@ -22,24 +22,36 @@
     <script>
         //Exercice 1
 
-        let item = document.querySelectorAll("ul");
-        item.style.background = "red";
-        item.style.display = "block";
-
+        //Récupérez le divet console.log it
         let NewDocum = document.querySelector("div")
         console.log(NewDocum)
 
-        let NewDocm2 = document.querySelector("ul").children[1]
-        NewDocm2.innerHTML = 'Richard'
-        console.log(NewDocm2)
+        //Changez le nom "Pete" en "Richard".
+       let NewDocm2 = document.querySelector("ul").children[1]
+       NewDocm2.innerHTML = 'Richard'
+       console.log(NewDocm2)
 
-        let globalDocum = document.querySelectorAll("li")
-        for (let tem of globalDocum) {
-            tem.innerHTML = "Alexandre"
+       //Remplacez chaque prénom des deux <ul>'spar votre nom.
+        let globalDocum = document.querySelectorAll("ul")
+        for (let item of globalDocum) {
+            item.children[0].innerHTML = "Alexandre"
         }
-        let deleteElt = document.querySelectorsAll("ul")
+
+        //Supprimez le <li>qui contient le nœud de texte "Sarah".
+       console.log(globalDocum[1]) 
+       let listLi = document.querySelectorAll("li")
+       listLi[3].remove()
+
+       //Ajouter une classe appelée student_listaux deux <ul>'s.
+       for(let i of globalDocum ){
+        i.classList.add("student")
+       }
+
+       //Ajouter les classes universityet attendance au premier <ul>.
+       globalDocum[0].classList.add("university", "attendance")
 
 
+       //Exercice 2
     </script>
 </body>
 
