@@ -28,18 +28,18 @@
             
 
             allBooks = [
-             Livre1 = {
-                Titre:"John",
-                auteur:"Doe", 
-                image : "une url",
+             {
+                Titre:"Le retour de l'enfant Soldat",
+                auteur:"Francois D'Asis N'Dah", 
+                image : "leretour200.jpg",
                 Read :true
                 },
     
-                Livre2 = {
+            {
                     Titre:"Jack",
                     auteur:"DOG", 
-                    image : "une url",
-                    déjàRead :false
+                    image : "img1.jpeg",
+                    Read :true
                     }
             ]
            ;
@@ -64,27 +64,36 @@
                     tr.appendChild(th)
                 }
             }
-
-            document.getElementsByTagName("th")[0].textContent="title"
-            document.getElementsByTagName("th")[1].textContent="Author"
-            document.getElementsByTagName("th")[2].textContent="Url"
             
-            //created table body
-            
-            for(item = 0; item <1; item++){
-                for(i = 0; i < allBooks.length ; i++){
+            //for(item = 0; item <1; item++){
+                for(let i = 0; i < allBooks.length ; i++){
+                    let book = allBooks[i]
                     let tr = document.createElement("tr")
                     tbl.appendChild(tr)
 
-                    for(j = 0; j <3 ; j++){
+                    for( let key in book){
                         let td = document.createElement("td")
                         tr.appendChild(td)
+                        
+                        if(key == 'image'){
+                            let img = document.createElement("img")
+                            img.src = book[key]
+                            td.appendChild(img)
+                            img.style.width = '100px'
+                            //img.style.height = '100px'
+                        }
+                        else{
+                            td.textContent = book[key]
+                        }
+                       // const values = Object.values(languages)
+                       // console.log(values)
+                       // if(key == 're')
                     }
                 }
                 
-            }
+           // }
 
-            let url = 'leretour200.jpg'
+            
  
             let image = new Image();
             image.src = url;
@@ -98,14 +107,11 @@
             document.getElementsByTagName("td")[0].textContent="Le Retour de l'enfant Soldat"
             document.getElementsByTagName("td")[1].textContent="Francois D'Asis N'Dah"
             document.getElementsByTagName("td")[2].appendChild(image);
-            //document.getElementsByTagName("td")[2].style.height="100px"
-            //document.getElementsByTagName("td")[2].style.width="100px"
+           
 
             document.getElementsByTagName("td")[3].textContent="title"
             document.getElementsByTagName("td")[4].textContent="Author"
-            //document.getElementsByTagName("td")[5].appendChild(image);
-            //document.getElementsByTagName("td")[5].style.width="100px"
-            //document.getElementsByTagName("td")[5].style.height="100px"
+            document.getElementsByTagName("td")[5].appendChild();
 
             //Style,,,
             document.getElementsByTagName("th")[0].style.backgroundColor="aqua"
